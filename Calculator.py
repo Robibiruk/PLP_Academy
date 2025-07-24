@@ -1,55 +1,34 @@
-# This function adds two numbers
-def add(x, y):
-    return x + y
+# 🎉 Welcome to the Fun Calculator! 🎉
+# We're going to add, subtract, multiply, and divide two numbers like a boss! 😎
 
-# This function subtracts two numbers
-def subtract(x, y):
-    return x - y
+# Step 1: Ask the user to input the first number
+# We're using 'float()' to make sure our numbers can have decimals too. Fancy, right? ✨
+num1 = float(input("Enter the first number: "))
 
-# This function multiplies two numbers
-def multiply(x, y):
-    return x * y
+# Step 2: Ask the user to input the second number
+# Same trick here—using 'float()' for decimal magic! 🧙‍♂️
+num2 = float(input("Enter the second number: "))
 
-# This function divides two numbers
-def divide(x, y):
-    return x / y
+# Step 3: Time to do some math! 🧠 Let's compute the sum, difference, product, and quotient.
 
+# Add the two numbers (Yay! Addition is the first step to fun!) ➕
+sum_result = num1 + num2
 
-print("Hello, Please select operation.")
-print("1.Add")
-print("2.Subtract")
-print("3.Multiply")
-print("4.Divide")
+# Subtract the second number from the first (Negative vibes, but necessary! 😜) ➖
+difference_result = num1 - num2
 
-while True:
-    # take input from the user
-    choice = input("Enter choice(1/2/3/4): ")
+# Multiply the two numbers (More bang for your buck! 💥) ✖️
+product_result = num1 * num2
 
-    # check if choice is one of the four options
-    if choice in ('1', '2', '3', '4'):
-        try:
-            num1 = float(input("Enter first number: "))
-            num2 = float(input("Enter second number: "))
-        except ValueError:
-            print("Invalid input. Please enter a number.")
-            continue
+# Divide the first number by the second (Be careful with zero here, no math disasters! 😅) ➗
+# We'll assume the user is being responsible and not dividing by zero for now!
+quotient_result = num1 / num2
 
-        if choice == '1':
-            print(num1, "+", num2, "=", add(num1, num2))
+# Step 4: Show the user what we got! 🥳 Time for the big reveal! 🎉
+print(f"Results of your two numbers:")
+print(f"Sum: {sum_result}")  # ➕
+print(f"Difference: {difference_result}")  # ➖
+print(f"Product: {product_result}")  # ✖️
+print(f"Quotient: {quotient_result}")  # ➗
 
-        elif choice == '2':
-            print(num1, "-", num2, "=", subtract(num1, num2))
-
-        elif choice == '3':
-            print(num1, "*", num2, "=", multiply(num1, num2))
-
-        elif choice == '4':
-            print(num1, "/", num2, "=", divide(num1, num2))
-        
-        # check if user wants another calculation
-        # break the while loop if answer is no
-        next_calculation = input("Let's do next calculation? (yes/no): ")
-        if next_calculation == "no":
-          break
-    else:
-        print("Invalid Input")
+# 🏁 And that's it! You've just made a mini-calculator! 😎💻
